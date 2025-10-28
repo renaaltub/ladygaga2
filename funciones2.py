@@ -1,12 +1,11 @@
 from funciones import *
-from playlist import *
 from normalizacion import *
 import datetime
 
 def lista_temas(playlist: dict):
     temas = []
     for i in range(len(playlist)):
-        temas.append(normalizacion_temas(playlist))
+        temas.append(playlist[i]["Tema"])     
     return temas
 
 
@@ -17,3 +16,9 @@ def ordenar_por_duracion(playlist: list) -> list:
                 playlist[j], playlist[j+1] = playlist[j+1], playlist[j]
     return playlist
 
+
+def lista_de_colaboradores(playlist: dict):
+    colaboradores = []
+    for i in range(len(playlist)):
+        colaboradores.append(playlist[i]["Colaboradores"])     
+    return colaboradores

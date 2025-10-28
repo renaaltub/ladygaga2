@@ -15,29 +15,29 @@ def lista_colaboradores(playlist: dict):
         colaboradores = obtener_colaboradores(playlist[i]["Tema"])
         playlist[i]["Colaboradores"] = colaboradores
         #print(playlist[i]["Tema"] )
-    return(playlist[i]["Colaboradores"])
+    return playlist
         
     
 def vistas_enteros(playlist: dict):
     for i in range(len(playlist)):
         vistas = convertir_vistas_numerico(playlist[i]["Vistas"])
         playlist[i]["Vistas"] = vistas
-#        print(playlist[i]["Vistas"] )
-    return playlist[i]["Vistas"]
+#        print(playlist[i]["Vistas"])
+    return playlist
 
 def duracion_enteros(playlist: dict):
     for i in range(len(playlist)):
-        duracion = convertir_vistas_numerico(playlist[i]["Vistas"])
+        duracion = convertir_duracion_numerico(playlist[i]["Duracion"])
         playlist[i]["Duracion"] = duracion
 #        print(playlist[i]["Duracion"] )
-    return playlist[i]["Duracion"]
+    return playlist
 
 def mostrar_cancion_duracion(playlist: dict):
     for i in range(len(playlist)):
         duracion = convertir_duracion_numerico(playlist[i]["Duracion"])
         playlist[i]["Duracion"] = duracion
 #        print(playlist[i]["Duracion"] )
-    return playlist[i]["Duracion"]
+    return playlist
 
 def fecha_normalizacion(playlist: list) -> list:
     for i in range(len(playlist)):
