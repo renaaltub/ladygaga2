@@ -27,7 +27,7 @@ def vistas_enteros(playlist: dict):
 
 def duracion_enteros(playlist: dict):
     for i in range(len(playlist)):
-        duracion = convertir_duracion_numerico(playlist[i]["Duracion"])
+        duracion = convertir_vistas_numerico(playlist[i]["Vistas"])
         playlist[i]["Duracion"] = duracion
 #        print(playlist[i]["Duracion"] )
     return playlist[i]["Duracion"]
