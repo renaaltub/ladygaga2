@@ -211,5 +211,3 @@ playlist_lady_gaga = [
     }
 ]
 
-
-print(len(playlist_lady_gaga))
